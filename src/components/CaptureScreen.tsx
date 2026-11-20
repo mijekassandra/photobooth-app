@@ -59,7 +59,7 @@ const CaptureScreen = forwardRef<CaptureScreenHandle, CaptureScreenProps>(
     }));
 
     return (
-      <div className="flex w-[360px] flex-col items-center justify-center">
+      <div className="flex w-full max-w-[360px] flex-col items-center justify-center">
         <img
           src="/frames/photobooth-header.png"
           alt="Photobooth Header"

@@ -67,12 +67,14 @@ const Booth = () => {
       style={{ backgroundImage: "url('/frames/background.png')" }}
     >
       <h1 className="text-header mb-6">Photobooth App</h1>
-      <div className="flex items-start gap-12">
-        <div className="flex flex-col items-center">
+      <div className="flex w-full max-w-5xl items-start justify-center gap-12">
+        <div className="flex w-full max-w-[360px] flex-col items-center">
           <CaptureScreen ref={cameraRef} countdown={countdown} shot={shot} />
           <CaptureButton onClick={startSession} disabled={phase !== "idle"} />
         </div>
-        <PhotoStrip photos={photos} />
+        <div className="hidden md:block">
+          <PhotoStrip photos={photos} />
+        </div>
       </div>
 
       {phase === "processing" && (
