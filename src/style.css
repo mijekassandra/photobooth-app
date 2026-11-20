@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --color-crimson: #ef7097;
+  --color-light-crimson: #ffafc3;
+  --color-cream: #ffe4b8;
+  --color-light-cream: #fbf5e1;
+  --color-dark-gray: #231f20;
+  --color-dark-gray-2: #3a3a3a;
+
+  --font-bogart: "Bogart", system-ui, sans-serif;
+}
+
+@font-face {
+  font-family: "Bogart";
+  src: url("./assets/font/Bogart-Bold-trial.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bogart";
+  src: url("./assets/font/Bogart-Extrabold-trial.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: var(--font-bogart);
+}
+
+.text-header {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--color-cream);
+  text-shadow:
+    1px 1px 0 var(--color-crimson),
+    2px 2px 0 var(--color-crimson),
+    3px 3px 0 var(--color-crimson),
+    4px 4px 0 var(--color-crimson);
+}
+
+.capture-btn {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  width: 200px;
+  padding: 6px 18px;
+  background-color: var(--color-light-crimson);
+  border: 1.5px solid var(--color-dark-gray);
+  color: var(--color-light-cream);
+  font-size: 24px;
+  box-shadow:
+    1px 1px 0 var(--color-crimson),
+    2px 2px 0 var(--color-crimson),
+    3px 3px 0 var(--color-crimson),
+    4px 4px 0 var(--color-crimson),
+    4px 4px 0 1.5px var(--color-dark-gray);
+  transition: box-shadow 0.12s ease;
+}
+
+.capture-btn-wrap {
+  transition: transform 0.12s ease;
+}
+
+.capture-btn-wrap:hover {
+  transform: translate(-2px, -2px);
+}
+
+.capture-btn-wrap:hover .capture-btn {
+  box-shadow:
+    3px 3px 0 var(--color-crimson),
+    4px 4px 0 var(--color-crimson),
+    5px 5px 0 var(--color-crimson),
+    6px 6px 0 var(--color-crimson),
+    6px 6px 0 1.5px var(--color-dark-gray);
+}
+
+.capture-btn-wrap:active {
+  transform: translate(4px, 4px);
+}
+
+.capture-btn-wrap:active .capture-btn {
+  box-shadow: 0 0 0 1.5px var(--color-dark-gray);
+}
+
+.photo-strip {
+  width: 180px;
+  height: -webkit-fill-available;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: var(--color-light-cream);
+  border: 2px solid var(--color-dark-gray);
+}
+
+.photo-slot {
+  width: 100%;
+  height: 90px;
+  background: #d7eef8;
+  border: 2px solid var(--color-dark-gray);
+}
