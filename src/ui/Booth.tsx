@@ -7,7 +7,7 @@ import PhotoStrip from "../components/PhotoStrip";
 import StripModal from "../components/StripModal";
 
 const SHOTS = 3;
-const COUNTDOWN_SECONDS = 5;
+const COUNTDOWN_SECONDS = 3;
 
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 

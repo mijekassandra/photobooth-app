@@ -11,7 +11,12 @@ const CaptureButton = ({ onClick, disabled = false }: CaptureButtonProps) => {
         alt=""
         className="absolute top-[-30px] right-34 z-10 h-[100px]"
       />
-      <button type="button" onClick={onClick} disabled={disabled} className="capture-btn">
+      <button
+        type="button"
+        onClick={onClick}
+        disabled={disabled}
+        className="capture-btn"
+      >
         Capture
       </button>
     </div>
