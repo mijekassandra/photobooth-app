@@ -1,18 +1,17 @@
-import React from "react";
-
 interface CaptureButtonProps {
   onClick: () => void;
+  disabled?: boolean;
 }
 
-const CaptureButton = ({ onClick }: CaptureButtonProps) => {
+const CaptureButton = ({ onClick, disabled = false }: CaptureButtonProps) => {
   return (
-    <div className="capture-btn-wrap flex justify-center items-center relative bg-pink-500 mt-8 w-fit">
+    <div className="capture-btn-wrap relative mt-8 flex w-fit items-center justify-center">
       <img
-        src="./public/stickers/heart.png"
-        alt="Capture Button"
+        src="/stickers/heart.png"
+        alt=""
         className="absolute top-[-30px] right-34 h-[100px]"
-      ></img>
-      <button type="button" onClick={onClick} className="capture-btn">
+      />
+      <button type="button" onClick={onClick} disabled={disabled} className="capture-btn">
         Capture
       </button>
     </div>
