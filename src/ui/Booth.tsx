@@ -66,7 +66,7 @@ const Booth = () => {
       className="flex min-h-screen w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat px-4 py-8"
       style={{ backgroundImage: "url('/frames/background.png')" }}
     >
-      <h1 className="text-header mb-6">Photobooth App 1</h1>
+      <h1 className="text-header mb-6">Photobooth App</h1>
       <div className="flex items-start gap-12">
         <div className="flex flex-col items-center">
           <CaptureScreen ref={cameraRef} countdown={countdown} shot={shot} />
